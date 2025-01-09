@@ -32,4 +32,9 @@ public class WeatherService implements IWeatherService {
     public void remove(Long id) {
         weatherRepository.deleteById(id);
     }
+
+    @Override
+    public Optional<Weather> findByLocation(String location) {
+        return weatherRepository.findByLocation(location);
+    }
 }
